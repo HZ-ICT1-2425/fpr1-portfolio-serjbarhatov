@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('content')
+
 <header>
     <h1>First Feedback</h1>
 </header>
@@ -32,4 +33,5 @@
         versions of ourselves.
     </article>
 </section>
+
 @endsection

@@ -5,7 +5,7 @@
     <h1>Hi.</h1>
     </header>
     <a href="https://www.youtube.com/watch?v=UXYZp35oafc" target="blank">
-        <img src="/images/index-illusion1.gif" alt="Beautiful dot illusion">
+        <img src="/images/index-illusion1.gif" class="index-page-content-img" alt="Beautiful dot illusion">
     </a>
 
     <section class="content">

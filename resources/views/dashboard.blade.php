@@ -7,7 +7,7 @@
 </header>
 
 <section class="content">
-<img src="/resources/hz-logo.png" class="hz-logo">
+<img src="  /images/hz-logo.png" class="hz-logo">
 <h2 class="section-title">My study progress</h2>
 <table id="exams-table">
     <tr>

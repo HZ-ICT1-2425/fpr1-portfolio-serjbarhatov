@@ -11,7 +11,7 @@
 <h2 class="section-title">Study Choice</h2>
 <p class="blog-post-date">2024-09-04 07:50PM UTC</p>
 <article>When it came to selecting a study program, I knew I wanted to pursue a career that was both
-    challenging and rewarding. <a href="/blog-posts/study-choice.html" class="read-more">Read&nbsp;more...</a>
+    challenging and rewarding. <a href="/blog-posts/study-choice" class="read-more">Read&nbsp;more...</a>
 </article>
 </section>
 
@@ -19,7 +19,7 @@
 <h2 class="section-title">Personal Analysis</h2>
 <p class="blog-post-date">2024-09-03 07:50PM UTC</p>
 <article>As I reflect on my personal strengths, weaknesses, opportunities, and threats, I've gained a
-    clearer understanding of myself and my potential. <a href="/blog-posts/personal-analysis.html"
+    clearer understanding of myself and my potential. <a href="/blog-posts/personal-analysis"
     class="read-more">Read&nbsp;more...</a></article>
 </section>
 
@@ -27,7 +27,7 @@
 <h2 class="section-title">Programming Experience</h2>
 <p class="blog-post-date">2024-09-02 07:50PM UTC</p>
 <article>Growing up, I was always fascinated by technology. I spent countless hours tinkering with toys and
-    gadgets, trying to understand how they worked. <a href="/blog-posts/programming-experience.html"
+    gadgets, trying to understand how they worked. <a href="/blog-posts/programming-experience"
     class="read-more">Read&nbsp;more...</a></article>
 </section>
 
@@ -45,7 +45,7 @@
 <p class="blog-post-date">2024-08-31 07:50PM UTC</p>
 <article>A striking feature of the rise of AI has been the level of concern and passion to which it has led.
     Other technological advances have generated enthusiasm and scepticism. Most have not led to the same
-    claims of imminent utopia or incipient apocalypse. <a href="/blog-posts/ict-post.html"
+    claims of imminent utopia or incipient apocalypse. <a href="/blog-posts/ict-post"
     class="read-more">Read&nbsp;more...</a></article>
 </section>
 
