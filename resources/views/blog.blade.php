@@ -7,6 +7,9 @@
 <p>Check out the latest posts</p>
 </header>
 
+<a href="{{ route('posts.create') }}" class="button is-primary">Create New Post</a>
+
+
 <section class="content">
 <h2 class="section-title">Study Choice</h2>
 <p class="blog-post-date">2024-09-04 07:50PM UTC</p>
