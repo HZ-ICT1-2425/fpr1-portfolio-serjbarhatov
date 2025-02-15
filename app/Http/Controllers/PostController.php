@@ -19,8 +19,8 @@ class PostController extends Controller
 {
     // Validate request data
     $request->validate([
-        'title' => 'required|unique:posts,title|max:255',
-        'slug' => 'required|unique:posts,slug|max:255',
+        'title' => 'required|unique:posts,title|min:10|max:100',
+        'slug' => 'required|unique:posts,slug|min:10|max:255',
         'body' => 'required',
     ]);
 
