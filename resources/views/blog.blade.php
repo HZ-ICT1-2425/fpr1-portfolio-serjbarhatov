@@ -7,7 +7,7 @@
 <p>Check out the latest posts</p>
 </header>
 
-<a href="{{ route('posts.create') }}" class="button is-primary">Create New Post</a>
+<a href="{{ route('admin.create-post') }}" class="button is-dark">Create New Post</a>
 
 
 <section class="content">
