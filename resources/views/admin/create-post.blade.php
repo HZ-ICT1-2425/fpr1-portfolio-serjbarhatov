@@ -23,6 +23,20 @@
     </div>
 
     <div class="field">
+        <label class="label">Article Source</label>
+        <div class="control">
+            <input class="input" type="text" name="article_source" placeholder="Enter post source">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Summary</label>
+        <div class="control">
+            <textarea class="textarea" name="summary" placeholder="Enter post summary" required></textarea>
+        </div>
+    </div>
+
+    <div class="field">
         <label class="label">Body</label>
         <div class="control">
             <textarea class="textarea" name="body" placeholder="Enter post content" required></textarea>

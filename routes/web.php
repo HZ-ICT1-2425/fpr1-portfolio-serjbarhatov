@@ -15,7 +15,7 @@ Route::get('/dashboard', [MainController::class, 'dashboard'])->name('dashboard'
 
 Route::get('/blog', [MainController::class, 'blog'])->name('blog');
 
-Route::get('/blog-posts/{postName}', [MainController::class, 'blogPost'])->name('blog-post');
+Route::get('/blog-posts/{slug}', [MainController::class, 'blogPost'])->name('blog-post');
 
 
 // Blog posts CRUD
@@ -23,3 +23,8 @@ Route::get('/posts/create', [PostController::class, 'create'])->name('admin.crea
 
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 
+Route::get('posts/{post}/edit', [PostController::class, 'edit'])->name('admin.edit-post');
+
+Route::delete('posts/{post}', [PostController::class, 'delete'])->name('admin.delete-post');
+
+Route::put('posts/{post}', [PostController::class, 'update'])->name('admin.update-post');

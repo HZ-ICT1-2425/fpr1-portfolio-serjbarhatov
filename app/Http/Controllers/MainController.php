@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\View\View;
 
+use App\Models\Post;
+
 class MainController extends Controller
 {
     public static function menu(string $route): array {
@@ -41,11 +43,13 @@ class MainController extends Controller
 
     public function blog(): view {
         $menu = MainController::menu('blog');
-        return view('blog', compact('menu'));
+        $posts = Post::orderBy('updated_at', 'desc')->get();
+        return view('blog', compact('menu', 'posts'));
     }
 
-    public function blogPost(string $postName): view {
+    public function blogPost(string $slug): view {
         $menu = MainController::menu('blog');
-        return view('blog-posts.' . $postName, compact('menu'));
+        $post = Post::where('slug', $slug)->first();
+        return view('post', compact('menu', 'post'));
     }
 }
