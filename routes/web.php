@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,14 @@ Route::get('posts/{post}/edit', [PostController::class, 'edit'])->name('admin.ed
 Route::delete('posts/{post}', [PostController::class, 'delete'])->name('admin.delete-post');
 
 Route::put('posts/{post}', [PostController::class, 'update'])->name('admin.update-post');
+
+// FAQ CRUD
+Route::get('/faq/create', [FaqController::class, 'create'])->name('admin.create-faq');
+
+Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
+
+Route::get('faq/{faq}/edit', [FaqController::class, 'edit'])->name('admin.edit-faq');
+
+Route::delete('delete-faq/{faq}', [FaqController::class, 'delete'])->name('admin.delete-faq');
+
+Route::put('faq/{faq}', [FaqController::class, 'update'])->name('admin.update-faq');

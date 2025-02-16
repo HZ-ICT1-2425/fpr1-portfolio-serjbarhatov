@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('question')->unique();
-            $table->string('answer');
+            $table->longText('answer');
             $table->string('link')->nullable();
         });
     }

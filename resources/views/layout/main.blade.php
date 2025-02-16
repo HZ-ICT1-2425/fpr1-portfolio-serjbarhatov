@@ -8,7 +8,7 @@
     content="The purpose of this page is to give the user my opinion why I think the HBO-ICT programme and the ICT field suits me.">
   <meta name="keywords"
     content="HTML, CSS, portfolio, portfolio website, design portfolio, developer portfolio, creative portfolio, portfolio showcase, portfolio website design, portfolio website examples, portfolio website templates, portfolio website development, portfolio website marketing, portfolio website optimization, portfolio website portfolio, portfolio website resume, portfolio website CV, how to create a portfolio website, best portfolio website design, portfolio website examples for designers, portfolio website templates for developers, portfolio website marketing strategies, portfolio website optimization tips, portfolio website portfolio tips, portfolio website resume tips, portfolio website CV tips">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+  @vite(['resources/sass/app.scss', 'resources/js/app.js'])
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/sidebar.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">

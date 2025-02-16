@@ -21,7 +21,6 @@ class PostController extends Controller
 
         Post::create($attributes);
 
-        // Redirect to the blog page
         return redirect()->route('blog')->with('success', 'Post created successfully!');
     }
 

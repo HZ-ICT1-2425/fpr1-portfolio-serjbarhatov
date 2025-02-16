@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use Illuminate\View\View;
 
 use App\Models\Post;
@@ -37,8 +38,9 @@ class MainController extends Controller
     }
 
     public function faq(): view {
+        $faqs = Faq::orderBy('updated_at', 'desc')->get();
         $menu = MainController::menu('faq');
-        return view('faq', compact('menu'));
+        return view('faq', compact('menu', 'faqs'));
     }
 
     public function blog(): view {
