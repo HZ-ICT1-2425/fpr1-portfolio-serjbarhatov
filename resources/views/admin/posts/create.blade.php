@@ -46,4 +46,6 @@
     <button type="submit" class="button is-primary">Submit</button>
 </form>
 
+@include('admin.errors')
+
 @endsection

@@ -21,7 +21,7 @@
             <label class="label">Answer</label>
             <div class="control">
                 <textarea class="textarea" name="answer" placeholder="Enter answer" required>{{old('answer') ?? $faq->answer}}
-                        </textarea>
+                            </textarea>
             </div>
         </div>
 
@@ -36,19 +36,6 @@
 
     </form>
 
-    @if ($errors->any())
-        <article style="margin-top: 2rem" class="message is-danger">
-            <div class="message-header">
-                <p>Errors</p>
-            </div>
-            <div class="message-body">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        </article>
-    @endif
+@include('admin.errors')
 
 @endsection
