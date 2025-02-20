@@ -58,6 +58,7 @@ class PostController extends Controller
             'slug' => 'required|min:10|max:255' . $uniqueRequired,
             'body' => 'required|min:10|max:65000',
             'summary' => 'required|min:10|max:65000',
+            'article_source' => 'nullable|url',
         ]);
     }
 }

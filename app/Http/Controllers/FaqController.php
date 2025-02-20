@@ -50,6 +50,7 @@ class FaqController extends Controller
         return $request->validate([
             'question' => 'required|min:10|max:100' . $uniqueRequired,
             'answer' => 'required|min:10|max:65000',
+            'link' => 'nullable|url',
         ]);
     }
 }

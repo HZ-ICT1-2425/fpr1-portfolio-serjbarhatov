@@ -12,7 +12,7 @@
         <div class="field">
             <label class="label">Title</label>
             <div class="control">
-                <input value="{{$post->title}}" class="input" type="text" name="title" placeholder="Enter post title"
+                <input value="{{ old('title', $post->title) }}" class="input" type="text" name="title" placeholder="Enter post title"
                     required>
             </div>
         </div>
@@ -20,14 +20,14 @@
         <div class="field">
             <label class="label">Slug</label>
             <div class="control">
-                <input value="{{$post->slug}}" class="input" type="text" name="slug" placeholder="Enter post slug" required>
+                <input value="{{ old('slug', $post->slug) }}" class="input" type="text" name="slug" placeholder="Enter post slug" required>
             </div>
         </div>
 
         <div class="field">
             <label class="label">Article Source</label>
             <div class="control">
-                <input value="{{$post->article_source}}" class="input" type="text" name="article_source"
+                <input value="{{ old('article_source', $post->article_source) }}" class="input" type="text" name="article_source"
                     placeholder="Enter post source">
             </div>
         </div>
@@ -36,14 +36,14 @@
             <label class="label">Summary</label>
             <div class="control">
                 <textarea class="textarea" name="summary" placeholder="Enter post summary"
-                    required>{{$post->summary}}</textarea>
+                    required>{{ old('summary', $post->summary) }}</textarea>
             </div>
         </div>
 
         <div class="field">
             <label class="label">Body</label>
             <div class="control">
-                <textarea class="textarea" name="body" placeholder="Enter post content" required>{{$post->body}}</textarea>
+                <textarea class="textarea" name="body" placeholder="Enter post content" required>{{ old('body', $post->body) }}</textarea>
             </div>
         </div>
 
