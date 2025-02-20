@@ -7,7 +7,7 @@
         <p>Check out the latest posts</p>
     </header>
 
-    <a href="{{ route('admin.create-post') }}" class="button is-success is-dark">Create New Post</a>
+    <a href="{{ route('admin.posts.create-post') }}" class="button is-success is-dark">Create New Post</a>
 
 
     @foreach ($posts as $post)
@@ -18,7 +18,7 @@
                 @method ('DELETE')
                 <p class="blog-post-date">
                     {{$post->updated_at}}
-                    <a href="{{ route('admin.edit-post', $post) }}" class="button is-info is-dark is-small">Edit post</a>
+                    <a href="{{ route('admin.posts.edit-post', $post) }}" class="button is-info is-dark is-small">Edit post</a>
                     <button class="button is-danger is-dark is-small">Delete post</button>
                 </p>
             </form>

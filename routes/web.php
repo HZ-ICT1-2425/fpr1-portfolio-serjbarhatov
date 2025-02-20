@@ -20,22 +20,22 @@ Route::get('/blog-posts/{slug}', [MainController::class, 'blogPost'])->name('blo
 
 
 // Blog posts CRUD
-Route::get('/posts/create', [PostController::class, 'create'])->name('admin.create-post');
+Route::get('/posts/create', [PostController::class, 'create'])->name('admin.posts.create-post');
 
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 
-Route::get('posts/{post}/edit', [PostController::class, 'edit'])->name('admin.edit-post');
+Route::get('posts/{post}/edit', [PostController::class, 'edit'])->name('admin.posts.edit-post');
 
 Route::delete('posts/{post}', [PostController::class, 'delete'])->name('admin.delete-post');
 
 Route::put('posts/{post}', [PostController::class, 'update'])->name('admin.update-post');
 
 // FAQ CRUD
-Route::get('/faq/create', [FaqController::class, 'create'])->name('admin.create-faq');
+Route::get('/faq/create', [FaqController::class, 'create'])->name('admin.faqs.create-faq');
 
 Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
 
-Route::get('faq/{faq}/edit', [FaqController::class, 'edit'])->name('admin.edit-faq');
+Route::get('faq/{faq}/edit', [FaqController::class, 'edit'])->name('admin.faqs.edit-faq');
 
 Route::delete('delete-faq/{faq}', [FaqController::class, 'delete'])->name('admin.delete-faq');
 

@@ -9,8 +9,8 @@ class FaqController extends Controller
 {
     public function create()
     {
-        $menu = MainController::menu('faq');
-        return view('admin.create-faq', compact('menu'));
+        $menu = menu('faq');
+        return view('admin.faqs.create-faq', compact('menu'));
 
     }
 
@@ -31,8 +31,8 @@ class FaqController extends Controller
 
     public function edit(Faq $faq)
     {
-        $menu = MainController::menu('faq');
-        return view('admin.edit-faq', compact('menu', 'faq'));
+        $menu = menu('faq');
+        return view('admin.faqs.edit-faq', compact('menu', 'faq'));
     }
 
     public function update(Request $request, faq $faq)
@@ -47,15 +47,9 @@ class FaqController extends Controller
     private function getValidAttributes(Request $request, $checkUnique = false)
     {
         $uniqueRequired = $checkUnique ? '|unique:faqs' : '';
-        $request->validate([
+        return $request->validate([
             'question' => 'required|min:10|max:100' . $uniqueRequired,
             'answer' => 'required|min:10|max:65000',
         ]);
-
-        return [
-            'question' => $request->question,
-            'answer' => $request->answer,
-            'link' => $request->link,
-        ];
     }
 }

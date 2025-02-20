@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 
 use App\Models\Post;
 
 class PostController extends Controller
 {
+    /**
+     * @return Factory|View|Application
+     */
     public function create()
     {
-        $menu = MainController::menu('blog');
-        return view('admin.create-post', compact('menu'));
-
+        $menu = menu('blog');
+        return view('admin.posts.create-post', compact('menu'));
     }
 
     public function store(Request $request)
@@ -32,8 +37,8 @@ class PostController extends Controller
 
     public function edit(Post $post)
     {
-        $menu = MainController::menu('blog');
-        return view('admin.edit-post', compact('menu', 'post'));
+        $menu = menu('blog');
+        return view('admin.posts.edit-post', compact('menu', 'post'));
     }
 
     public function update(Request $request, Post $post)
@@ -48,19 +53,11 @@ class PostController extends Controller
     private function getValidAttributes(Request $request, $checkUnique = false)
     {
         $uniqueRequired = $checkUnique ? '|unique:posts' : '';
-        $request->validate([
+        return $request->validate([
             'title' => 'required|min:10|max:100' . $uniqueRequired,
             'slug' => 'required|min:10|max:255' . $uniqueRequired,
             'body' => 'required|min:10|max:65000',
             'summary' => 'required|min:10|max:65000',
         ]);
-
-        return [
-            'title' => $request->title,
-            'slug' => $request->slug,
-            'article_source' => $request->article_source,
-            'summary' => $request->summary,
-            'body' => $request->body,
-        ];
     }
 }
