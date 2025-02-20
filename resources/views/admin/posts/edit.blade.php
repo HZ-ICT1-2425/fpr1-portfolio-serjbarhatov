@@ -6,7 +6,7 @@
         <h1 class="title">Edit Post</h1>
     </header>
 
-    <form action="{{ route('admin.update-post', $post) }}" method="POST">
+    <form action="{{ route('admin.posts.update', $post) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="field">

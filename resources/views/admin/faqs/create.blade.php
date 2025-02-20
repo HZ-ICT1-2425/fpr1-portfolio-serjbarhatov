@@ -6,7 +6,7 @@
     <h1 class="title">Create a New FAQ</h1>
 </header>
 
-<form action="{{ route('faq.store') }}" method="POST">
+<form action="{{ route('admin.faqs.store') }}" method="POST">
     @csrf
     <div class="field">
         <label class="label">Question</label>

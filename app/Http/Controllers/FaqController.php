@@ -10,7 +10,7 @@ class FaqController extends Controller
     public function create()
     {
         $menu = menu('faq');
-        return view('admin.faqs.create-faq', compact('menu'));
+        return view('admin.faqs.create', compact('menu'));
 
     }
 
@@ -23,7 +23,7 @@ class FaqController extends Controller
         return redirect()->route('faq')->with('success', 'FAQ created successfully!');
     }
 
-    public function delete(Faq $faq)
+    public function destroy(Faq $faq)
     {
         $faq->delete();
         return redirect()->route('faq')->with('success', 'FAQ deleted successfully!');
@@ -32,7 +32,7 @@ class FaqController extends Controller
     public function edit(Faq $faq)
     {
         $menu = menu('faq');
-        return view('admin.faqs.edit-faq', compact('menu', 'faq'));
+        return view('admin.faqs.edit', compact('menu', 'faq'));
     }
 
     public function update(Request $request, faq $faq)

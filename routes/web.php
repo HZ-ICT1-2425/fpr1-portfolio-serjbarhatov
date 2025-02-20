@@ -5,38 +5,28 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
-
+// Main Pages
 Route::get('/', [MainController::class, 'welcome'])->name('home');
-
 Route::get('/profile', [MainController::class, 'profile'])->name('profile');
-
 Route::get('/faq', [MainController::class, 'faq'])->name('faq');
-
 Route::get('/dashboard', [MainController::class, 'dashboard'])->name('dashboard');
-
 Route::get('/blog', [MainController::class, 'blog'])->name('blog');
-
 Route::get('/blog-posts/{slug}', [MainController::class, 'blogPost'])->name('blog-post');
 
+// RESTful resource routes for Blog Posts (Admin)
+Route::resource('posts', PostController::class)->names([
+    'create'  => 'admin.posts.create',   // GET /posts/create  (Show create form)
+    'store'   => 'admin.posts.store',    // POST /posts  (Store new post)
+    'edit'    => 'admin.posts.edit',     // GET /posts/{post}/edit  (Show edit form)
+    'update'  => 'admin.posts.update',   // PUT/PATCH /posts/{post}  (Update post)
+    'destroy' => 'admin.posts.destroy',  // DELETE /posts/{post}  (Delete post)
+]);
 
-// Blog posts CRUD
-Route::get('/posts/create', [PostController::class, 'create'])->name('admin.posts.create-post');
-
-Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
-
-Route::get('posts/{post}/edit', [PostController::class, 'edit'])->name('admin.posts.edit-post');
-
-Route::delete('posts/{post}', [PostController::class, 'delete'])->name('admin.delete-post');
-
-Route::put('posts/{post}', [PostController::class, 'update'])->name('admin.update-post');
-
-// FAQ CRUD
-Route::get('/faq/create', [FaqController::class, 'create'])->name('admin.faqs.create-faq');
-
-Route::post('/faq', [FaqController::class, 'store'])->name('faq.store');
-
-Route::get('faq/{faq}/edit', [FaqController::class, 'edit'])->name('admin.faqs.edit-faq');
-
-Route::delete('delete-faq/{faq}', [FaqController::class, 'delete'])->name('admin.delete-faq');
-
-Route::put('faq/{faq}', [FaqController::class, 'update'])->name('admin.update-faq');
+// RESTful resource routes for FAQ (Admin)
+Route::resource('faqs', FaqController::class)->names([
+    'create'  => 'admin.faqs.create',   // GET /faqs/create  (Show create form)
+    'store'   => 'admin.faqs.store',    // POST /faqs  (Store new FAQ)
+    'edit'    => 'admin.faqs.edit',     // GET /faqs/{faq}/edit  (Show edit form)
+    'update'  => 'admin.faqs.update',   // PUT/PATCH /faqs/{faq}  (Update FAQ)
+    'destroy' => 'admin.faqs.destroy',  // DELETE /faqs/{faq}  (Delete FAQ)
+]);

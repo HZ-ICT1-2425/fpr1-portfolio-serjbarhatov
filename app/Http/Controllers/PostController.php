@@ -17,7 +17,7 @@ class PostController extends Controller
     public function create()
     {
         $menu = menu('blog');
-        return view('admin.posts.create-post', compact('menu'));
+        return view('admin.posts.create', compact('menu'));
     }
 
     public function store(Request $request)
@@ -29,7 +29,7 @@ class PostController extends Controller
         return redirect()->route('blog')->with('success', 'Post created successfully!');
     }
 
-    public function delete(Post $post)
+    public function destroy(Post $post)
     {
         $post->delete();
         return redirect()->route('blog')->with('success', 'Post deleted successfully!');
@@ -38,7 +38,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $menu = menu('blog');
-        return view('admin.posts.edit-post', compact('menu', 'post'));
+        return view('admin.posts.edit', compact('menu', 'post'));
     }
 
     public function update(Request $request, Post $post)

@@ -6,7 +6,7 @@
     <h1 class="title">Create a New Post</h1>
 </header>
 
-<form action="{{ route('posts.store') }}" method="POST">
+<form action="{{ route('admin.posts.store') }}" method="POST">
     @csrf
     <div class="field">
         <label class="label">Title</label>

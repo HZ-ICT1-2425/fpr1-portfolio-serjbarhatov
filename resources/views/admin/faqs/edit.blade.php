@@ -6,23 +6,22 @@
         <h1 class="title">Edit FAQ</h1>
     </header>
 
-    <form action="{{ route('admin.update-faq', $faq) }}" method="POST">
+    <form action="{{ route('admin.faqs.update', $faq) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="field">
             <label class="label">Question</label>
             <div class="control">
-                <input value="{{old('question') ?? $faq->question}}" class="input" type="text" name="question" placeholder="Enter question"
-                    required>
+                <input value="{{old('question') ?? $faq->question}}" class="input" type="text" name="question"
+                    placeholder="Enter question" required>
             </div>
         </div>
 
         <div class="field">
             <label class="label">Answer</label>
             <div class="control">
-                <textarea class="textarea" name="answer" placeholder="Enter answer" required>
-                                    {{old('answer') ?? $faq->answer}}
-                                </textarea>
+                <textarea class="textarea" name="answer" placeholder="Enter answer" required>{{old('answer') ?? $faq->answer}}
+                        </textarea>
             </div>
         </div>
 
