@@ -16,14 +16,14 @@ class DashboardSeeder extends Seeder
     public function run()
     {
         $courses = [
-            ['cu_code' => 'CU75001V3', 'name' => 'Program & Career Orientation', 'credits' => 2.5],
-            ['cu_code' => 'CU75002V2', 'name' => 'Computer Science Basics', 'credits' => 5],
-            ['cu_code' => 'CU75003V1', 'name' => 'Programming Basics', 'credits' => 5],
-            ['cu_code' => 'CU75068V3', 'name' => 'Personal Professional Development Exploration', 'credits' => 12.5],
-            ['cu_code' => 'CU75004V1', 'name' => 'Object-Oriented Programming', 'credits' => 10],
-            ['cu_code' => 'CU75080V1', 'name' => 'Framework project 1', 'credits' => 10],
-            ['cu_code' => 'CU75081V1', 'name' => 'Business IT Consultancy basics', 'credits' => 2.5],
-            ['cu_code' => 'CU75011V3', 'name' => 'Framework project 2', 'credits' => 10],
+            ['cu_code' => 'CU75001V3', 'quarter' => '1', 'name' => 'Program & Career Orientation', 'credits' => 2.5],
+            ['cu_code' => 'CU75002V2', 'quarter' => '1', 'name' => 'Computer Science Basics', 'credits' => 5],
+            ['cu_code' => 'CU75003V1', 'quarter' => '1', 'name' => 'Programming Basics', 'credits' => 5],
+            ['cu_code' => 'CU75068V3', 'quarter' => '1-4', 'name' => 'Personal Professional Development Exploration', 'credits' => 12.5],
+            ['cu_code' => 'CU75004V1', 'quarter' => '2', 'name' => 'Object-Oriented Programming', 'credits' => 10],
+            ['cu_code' => 'CU75080V1', 'quarter' => '3', 'name' => 'Framework project 1', 'credits' => 10],
+            ['cu_code' => 'CU75081V1', 'quarter' => '3&4', 'name' => 'Business IT Consultancy basics', 'credits' => 2.5],
+            ['cu_code' => 'CU75011V3', 'quarter' => '4', 'name' => 'Framework project 2', 'credits' => 10],
         ];
 
         $testsData = [
