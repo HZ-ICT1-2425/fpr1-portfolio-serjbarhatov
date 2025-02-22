@@ -24,5 +24,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             FaqSeeder::class,
         ]);
+
+        DB::table('posts')->truncate();
+        $this->call([
+            PostSeeder::class,
+        ]);
     }
 }
