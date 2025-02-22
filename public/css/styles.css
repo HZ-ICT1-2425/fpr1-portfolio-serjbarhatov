@@ -1,0 +1,261 @@
+body {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #000000;
+  color: #efebe5;
+  margin: 0;
+  padding: 0;
+}
+
+#page-content {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+header {
+  text-align: center;
+  padding: 50px 0;
+}
+
+h1 {
+  font-size: 3em;
+  color: #f6f1f1;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.section-title {
+  color: #9290C3;
+  display: inline-block;
+  margin-bottom: 0px;
+  font-size: 2em;
+  margin-top: 1em;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+
+.content p {
+  line-height: 1.6;
+}
+
+.skills-list,
+.hobbies-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li,
+.hobbies-list li {
+  background: #1B1A55;
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 5px;
+}
+
+footer {
+  /* border-top: 1px solid #e6d329; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background-color: #1f1f1f;
+  text-align: center;
+}
+
+#footer-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1f1f1f;
+}
+
+.footer-menu-item {
+  float: right;
+}
+
+.footer-menu-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.footer-menu-item a:hover {
+  background-color: #111111;
+}
+
+.space-background {
+  background: url('https://steamuserimages-a.akamaihd.net/ugc/1672491783916829535/95E261AAC32640B9B09944E5C49F801665FB9163/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
+  background-size: cover;
+}
+
+.opacity-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  min-height: 100vh;
+}
+
+.footer-copyright {
+  float: left;
+  margin-left: 15px;
+}
+
+.image-container {
+  text-align: center;
+
+}
+
+.date-element {
+  color: rgb(142, 142, 142);
+}
+
+table {
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 0px solid;
+}
+
+#exams-table {
+  font-family: 'SF Pro Display', 'Courier New', Courier, monospace;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#exams-table td,
+#exams-table th {
+  border: 0px solid #e5ded4;
+  padding: 8px;
+}
+
+#exams-table tr:hover {
+  background-color: #535C91;
+}
+
+#exams-table th {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1B1A55;
+  color: #efebe5;
+}
+
+.w3-my-blue,
+.w3-hover-blue:hover {
+  color: #fff !important;
+  background-color: #535C91 !important;
+  padding-top: 3px !important;
+  height: 30px;
+}
+
+.w3-my-light-grey,
+.w3-hover-light-grey:hover,
+.w3-light-gray,
+.w3-hover-light-gray:hover {
+  color: #000 !important;
+  background-color: #c8c8c8 !important
+}
+
+.read-more {
+  color: #9290C3;
+  text-decoration: none;
+}
+
+.read-more:visited {
+  color: #9290C3;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+article {
+  font-family: 'SF Pro Display', 'Courier New', Courier, monospace;
+  font-size: x-large;
+}
+
+.faq-answer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: larger;
+}
+
+.faq-external-link {
+  color: #9290C3;
+  text-decoration: none;
+}
+
+.faq-external-link:hover {
+  text-decoration: underline;
+}
+
+.index-page-content h1 {
+  font-family: 'SF Pro Display';
+}
+
+.index-page-content-img {
+  width: 100%;
+}
+
+.index-page-quote {
+  font-family: 'SF Pro Display';
+  text-align: center;
+  font-size: xx-large;
+}
+
+.index-page-paragraph {
+  text-align: right;
+  margin-top: -16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.index-page-paragraph:hover {
+  text-decoration: underline;
+}
+
+#index-page-gif2 {
+  padding-top: 300px;
+}
+
+.index-curious-list {
+  list-style-type: none!important;
+  padding: 30px;
+}
+
+.index-curious-list li {
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 5px;
+  font-family: 'SF Pro Display';
+  font-size: large;
+  text-align: center;
+}
+
+.hz-logo {
+  float: right;
+  width: 20%;
+}
